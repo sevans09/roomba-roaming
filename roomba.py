@@ -1,5 +1,4 @@
-import time
-import sys
+import time, sys
 
 def checkGoHome(blackboard):
 	if blackboard["BATTERY_LEVEL"] < 30:
@@ -47,7 +46,6 @@ def checkDustySpot(blackboard):
 		for x in range(35):
 			if x % 5 == 0:
 				blackboard["BATTERY_LEVEL"] -= 5
-				print"Battery level decrementing: ", blackboard["BATTERY_LEVEL"]
 			time.sleep(1)
 		blackboard["DUSTY_SPOT"] = False
 		print "CLEAN DUSTY SPOT SUCCEEDED"
